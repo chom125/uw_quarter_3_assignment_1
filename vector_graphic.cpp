@@ -60,6 +60,11 @@ int VectorGraphic::get_height()
   return my_height;
 }
 
+int VectorGraphic::point_count()
+{
+  return my_points.size();
+}
+
 Point VectorGraphic::get_point(int index) const
 {
   return my_points[index];
