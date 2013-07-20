@@ -7,8 +7,8 @@ class Point
 public:
   Point(int x,int y);
   ~Point();
-  int get_x();
-  int get_y();
+  int get_x() const;
+  int get_y() const;
 
   bool operator==(const Point& p) const;
   bool operator!=(const Point& p) const;

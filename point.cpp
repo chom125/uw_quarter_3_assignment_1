@@ -12,17 +12,17 @@ Point::Point(int x, int y)
 
 Point::~Point(){};
 
-int Point::get_x()
+int Point::get_x() const
 {
   return my_x;
 }
 
-int Point::get_y()
+int Point::get_y() const
 {
   return my_y;
 }
 
-bool Point::operator==(const Point& p) const
+bool Point::operator==(const Point& p) const 
 {
   if(p.get_x() == my_x && p.get_y() == my_y)
   {

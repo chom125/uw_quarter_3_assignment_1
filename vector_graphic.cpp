@@ -4,7 +4,9 @@
 
 #include "vector_graphic.h"
 
-VectorGraphic::VectorGraphic(){};
+VectorGraphic::VectorGraphic()
+  :closed(false)
+{}
 VectorGraphic::~VectorGraphic(){};
 
 void VectorGraphic::add_point(const Point &p)
@@ -12,7 +14,7 @@ void VectorGraphic::add_point(const Point &p)
   my_points.push_back(p);
 }
 
-void VectorGraphic::remove_point(const Point& p)
+void VectorGraphic::remove_point(const Point& p) 
 {
   for(int x =0; x < my_points.size(); x++)
   {
