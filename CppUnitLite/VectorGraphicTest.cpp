@@ -50,6 +50,6 @@ TEST(XML_Reader, VectorGraphicPersistence)
   ss << VectorGraphicXML;
   ss << std::ios::eofbit;
   VectorGraphicPersistence persist;
-  persist.from_xml(ss);
+  VectorGraphic vg3 = persist.from_xml(ss);
 }
 

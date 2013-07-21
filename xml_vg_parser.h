@@ -10,6 +10,8 @@ class VectorGraphicPersistence
 public:
   VectorGraphicPersistence();
   ~VectorGraphicPersistence();
-  void from_xml(std::stringstream& ss);
+  VectorGraphic from_xml(std::stringstream& ss);
   std::stringstream o_xml(VectorGraphic& vg);
+private:
+  int to_i(std::string);
 };
