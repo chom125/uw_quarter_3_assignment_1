@@ -1,5 +1,5 @@
 #include "TestHarness.h"
-#include "../vector_graphic.h"
+#include "../xml_vg_parser.h"
 
 
 // include the header file for the class you are testing.
@@ -37,4 +37,19 @@ TEST(VectorAddingPoints, VectorGraphic)
   CHECK_EQUAL(3, vg2.point_count());
 }
 
+#define STR(a) #a
+const std::string VectorGraphicXML = STR(
+                                    <VectorGraphic>
+                                      <Point x="0" y="5"/>
+                                      <Point x="2" y="3"/>
+                                    </VectorGraphic>);
+
+TEST(XML_Reader, VectorGraphicPersistence)
+{
+  std::stringstream ss;
+  ss << VectorGraphicXML;
+  ss << std::ios::eofbit;
+  VectorGraphicPersistence persist;
+  persist.from_xml(ss);
+}
 
