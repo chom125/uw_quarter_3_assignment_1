@@ -53,17 +53,17 @@ VectorGraphic VectorGraphicPersistence::from_xml(std::stringstream& ss)
   
   int point_x;
   int point_y;
-  if(arguments[0] == "VectorGraphic")
-  {
-    std::cout << "dubugging";
-    VectorGraphic vg1;
+  /* if(arguments[0] == "VectorGraphic") */
+  /* { */
+  /*   std::cout << "dubugging"; */
+  /*   VectorGraphic vg1; */
     for(int x=0; x<arguments.size(); x++)
     {
-
+      std::cout << arguments[x];
     }
-    std::cout << vg1.point_count() << std::cout;
+    /* std::cout << vg1.point_count() << std::cout; */
     return vg1;
-  }
+  /* } */
 }
 
 int VectorGraphicPersistence::to_i(std::string s)
