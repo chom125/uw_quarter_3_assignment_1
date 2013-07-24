@@ -59,39 +59,7 @@ VectorGraphic VectorGraphicPersistence::from_xml(std::stringstream& ss)
     VectorGraphic vg1;
     for(int x=0; x<arguments.size(); x++)
     {
-      if(arguments[x] == "closed")
-      {
-        if(arguments[x+1] == "true")
-        {
-          vg1.close_shape();
-        }
-        if(arguments[x+1] == "false")
-        {
-          vg1.open_shape();
-        }
-      }
 
-      if(arguments[x] == "Point")
-      {
-        if(arguments[x+1] == "x")
-        {
-          point_x = to_i(arguments[x+2]);
-          if(arguments[x+3] == "y" )
-          {
-            point_y = to_i(arguments[x+4]);
-            vg1.add_point(Point(point_x,point_y));
-          }
-        }
-        if(arguments[x+1] == "y")
-        {
-          point_y = to_i(arguments[x+2]);
-          if(arguments[x+3] == "x" )
-          {
-            point_x = to_i(arguments[x+4]);
-            vg1.add_point(Point(point_x,point_y));
-          }
-        }
-      }
     }
     std::cout << vg1.point_count() << std::cout;
     return vg1;
