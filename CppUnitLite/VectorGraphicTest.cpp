@@ -1,3 +1,4 @@
+#include <iostream>
 #include "TestHarness.h"
 #include "../xml_vg_parser.h"
 
@@ -11,6 +12,7 @@
 //
 TEST(PointInitTest, Point)
 {
+  std::cout << "starting";
   Point p1(1,2);
 
   CHECK_EQUAL(1,p1.get_x());
@@ -46,6 +48,7 @@ const std::string VectorGraphicXML = STR(
 
 TEST(XML_Reader, VectorGraphicPersistence)
 {
+  std::cout << "last test";
   std::stringstream ss;
   ss << VectorGraphicXML;
   ss << std::ios::eofbit;

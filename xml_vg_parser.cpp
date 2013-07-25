@@ -15,9 +15,10 @@ VectorGraphic VectorGraphicPersistence::from_xml(std::stringstream& ss)
   char c;
   while(ss.get(c))
   {
+    std::cout << ".";
     if(c == '<')
     {
-      while(c != '>')
+      while(c != '>' && c != '\n')
       {
         ss.get(c);
         if(c != ' ' ||c != '\n' || c!= '\t' || c != '>' )
@@ -62,7 +63,7 @@ VectorGraphic VectorGraphicPersistence::from_xml(std::stringstream& ss)
       std::cout << arguments[x];
     }
     /* std::cout << vg1.point_count() << std::cout; */
-    return vg1;
+    /* return vg1; */
   /* } */
 }
 
